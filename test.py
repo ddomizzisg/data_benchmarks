@@ -11,7 +11,7 @@ def generate_test_file(path="test_upload.dat", size_mb=50):
         f.write(os.urandom(size_mb * 1024 * 1024))
     print(f"📦 Generated test file: {path} ({size_mb} MB)")
 
-def ftp_upload_download(host, local_file="test_upload.dat", download_file="ftp_download.dat"):
+def ftp_upload_download(host, local_file, remote_filename, download_file):
     ftp_user = "parsltests"
     ftp_pass = "dodosaga1234."
     remote_filename = "benchmark_test.dat"
@@ -36,7 +36,7 @@ def ftp_upload_download(host, local_file="test_upload.dat", download_file="ftp_d
     size = os.path.getsize(download_file)
     return upload_time, download_time, size
 
-def http_upload_download(host, local_file="test_upload.dat", download_file="http_download.dat"):
+def http_upload_download(host, local_file, filename, download_file):
     filename = "benchmark_test.dat"
     upload_url = f"http://{host}:8080/{filename}"
     download_url = upload_url
