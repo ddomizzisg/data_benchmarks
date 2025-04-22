@@ -63,7 +63,7 @@ def run_tests(host, size_mb, repeat):
     generate_test_file(test_file, size_mb=size_mb)
     remote_filename = "benchmark_test.dat"
     
-    csv_file = "benchmark_results.csv"
+    csv_file = f"{size_mb}.csv"
     with open(csv_file, "w", newline="") as csvfile:
         fieldnames = ["iteration", "ftp_upload", "ftp_download", "http_upload", "http_download"]
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
