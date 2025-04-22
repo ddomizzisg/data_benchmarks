@@ -70,7 +70,7 @@ if __name__ == "__main__":
     http_up, http_down, http_size = http_upload_download(args.host, local_file=test_file)
 
     print("\n📊 Summary:")
-    print(f"FTP Upload speed:    {ftp_size / 1024 / 1024 / ftp_up:.2f} MB/s")
-    print(f"FTP Download speed:  {ftp_size / 1024 / 1024 / ftp_down:.2f} MB/s")
-    print(f"HTTP Upload speed:   {http_size / 1024 / 1024 / http_up:.2f} MB/s")
-    print(f"HTTP Download speed: {http_size / 1024 / 1024 / http_down:.2f} MB/s")
+    print(f"FTP Upload:    {ftp_up:.2f}")
+    print(f"FTP Download speed:  {ftp_down:.2f}")
+    print(f"HTTP Upload speed:   {http_up:.2f}")
+    print(f"HTTP Download speed: {http_down:.2f}")
