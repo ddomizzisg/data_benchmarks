@@ -17,9 +17,9 @@ services:
       - ./ftp_data:/home/vsftpd
 
   http:
-    image: httpd:alpine
+    build: ./http_server
     container_name: http_server
     ports:
-      - "8080:80"
+      - "8080:8080"
     volumes:
-      - ./shared_data:/usr/local/apache2/htdocs:ro
+      - shared_data:/app/data
