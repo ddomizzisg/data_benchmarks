@@ -3,6 +3,7 @@ import requests
 from ftplib import FTP
 from urllib.parse import urlparse
 import os
+import csv
 import argparse
 
 def generate_test_file(path="test_upload.dat", size_mb=50):
