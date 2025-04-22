@@ -11,8 +11,8 @@ def generate_test_file(path="test_upload.dat", size_mb=50):
     print(f"📦 Generated test file: {path} ({size_mb} MB)")
 
 def ftp_upload_download(host, local_file="test_upload.dat", download_file="ftp_download.dat"):
-    ftp_user = "testuser"
-    ftp_pass = "testpass"
+    ftp_user = "parsltests"
+    ftp_pass = "dodosaga1234."
     remote_filename = "benchmark_test.dat"
 
     print(f"\n🔼 FTP Upload to {host}/{remote_filename}")
